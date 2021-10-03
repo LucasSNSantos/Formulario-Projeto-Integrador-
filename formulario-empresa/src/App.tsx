@@ -1,25 +1,54 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './CSS/styles.css'
+import { Box, Button, Container, Grid, Avatar } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <div className="container">
+        <div className="box">
+          <form className="form">
+            <legend>
+              Esta é a ferramenta de GAP Análise, com base na Metodologia Killchain
+            </legend>
+
+            <Button variant="contained" size="large">
+              Vamos Lá!
+            </Button>
+          </form>
+
+
+          <div>
+            <Grid container spacing={2}>
+              <Grid item xs={3}>
+                <Avatar
+                  alt="Lucas Souza"
+                  src="/Images/lucas.jfif"
+                />
+              </Grid>
+              <Grid item xs={3}>
+                <Avatar
+                  alt="Caique Augusto"
+                  src="/Images/lucas.jfif"
+                />
+              </Grid>
+              <Grid item xs={3}>
+                <Avatar
+                  alt="Miguel Falcão"
+                  src="/Images/lucas.jfif"
+                />
+              </Grid>
+              <Grid item xs={3}>
+                <Avatar
+                  alt="Marcos Aurelio"
+                  src="/Images/lucas.jfif"
+                />
+              </Grid>
+            </Grid>
+          </div>
+        </div>
+      </div>
+    </body>
   );
 }
 
