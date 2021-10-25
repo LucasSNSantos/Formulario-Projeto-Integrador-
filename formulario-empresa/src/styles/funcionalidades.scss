@@ -8,14 +8,13 @@
         margin-top: 16px;
     }
     img {
+        width: 300px;
+        height: 300px;
         max-width: 320px;
         max-height: 320px;
     }
     aside{
         flex: 7;
-        background: #242425;
-        color: #fff;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,21 +27,36 @@
             color: #f8f8f8;
         }
 
+        h3{
+            size: 50px;
+        }
+
     }
     main{
-        flex:8;
-
-        padding: 0 32px;
+        flex:7;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 120px 80px;
         p{
             font-size: 24px;
             line-height: 32px;
             margin-top: 16px;
             color: black;
         }
+        img {
+            max-width: 320px;
+            max-height: 320px;
+        }
 
     }
 
+}
+.aside-right{
+    background: #242425;
+    color: #fff;
+}
+.aside-left{
+    background: #3e3e3f;
+    color: #fff;
 }

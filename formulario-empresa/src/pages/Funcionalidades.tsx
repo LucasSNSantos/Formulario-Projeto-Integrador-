@@ -3,7 +3,8 @@ import { Button } from '../Components/Button';
 import { Input } from '../Components/Input';
 import '../styles/funcionalidades.scss'
 import logopentest from '../assets/images/logopentest.svg'
-import formlogo from '../assets/images/formlogo.svg'
+import chain from '../assets/images/chain.svg'
+import relatorio from '../assets/images/relatorio.svg'
 
 
 
@@ -15,24 +16,35 @@ export function Funcionalidades() {
     function ExecutarPentest() {
         history.push('/Pentest');
     }
+    function GerarRelatorios() {
+        history.push('/Relatorios');
+    }
     return (
         <div id="page-funcionalidades">
-            <aside>
+            <aside className="aside-left">
                 <img src={logopentest} />
-                <strong>Pentest</strong>
-                <p>Execute um teste de penetração e verifique se há falhas no seu sistema</p>
+                <strong>Defesas</strong>
+                <p>Verifique a integridade do seu sistema contra ataques</p>
                 <Button onClick={ExecutarPentest}>
                     Executar
                 </Button>
             </aside>
             <main>
-                <img src={formlogo} />
-                <strong>Formulário</strong>
-                <p>Preencha este formulário para verificarmos a integridade da sua infraestrutura</p>
+                <img src={chain} />
+                <strong>Cyber Kill Chain</strong>
+                <p>Avaliação da integridade da sua infraestrutura</p>
                 <Button onClick={PreencherForms}>
                     Preencher
                 </Button>
             </main>
+            <aside className="aside-right">
+                <img src={relatorio} />
+                <strong>Relatórios</strong>
+                <p>Verifique os resultados dos testes</p>
+                <Button onClick={GerarRelatorios}>
+                    Executar
+                </Button>
+            </aside>
         </div>
 
     );
