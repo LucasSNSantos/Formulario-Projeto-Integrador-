@@ -1,17 +1,14 @@
-p{
-    font: 300 40px 'Poppins', sans-serif;
-    line-height: 42px;
-    margin-top: 16px;
-    margin-bottom: 20px;
-}
-
-.linha{
-    display: flex;
-    .child-1{
-        flex:1;
+.formulario{
+    p{
+        font: 300 40px 'Poppins', sans-serif;
+        line-height: 42px;
+        margin-top: 16px;
+        margin-bottom: 20px;
     }
-    .child2{
-        flex:2
+    
+    label{
+        font: 300 20px 'Poppins', sans-serif;
     }
+    
 }
 

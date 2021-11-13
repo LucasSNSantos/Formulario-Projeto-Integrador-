@@ -7,7 +7,6 @@ import chain from '../assets/images/chain.svg'
 import relatorio from '../assets/images/relatorio.svg'
 
 
-
 export function Funcionalidades() {
     const history = useHistory();
     function PreencherForms() {
@@ -22,28 +21,55 @@ export function Funcionalidades() {
     return (
         <div id="page-funcionalidades">
             <aside className="aside-left">
-                <img src={logopentest} />
-                <strong>Defesas</strong>
-                <p>Verifique a integridade do seu sistema contra ataques</p>
-                <Button onClick={ExecutarPentest}>
-                    Executar
-                </Button>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <img src={logopentest} />
+                    </div>
+                    <div className="col-lg-12">
+                        <strong>Defesas</strong>
+                    </div>
+                    <div className="col-lg-12">
+                        <p>Verifique a integridade do seu sistema contra ataques</p>
+                    </div>
+                    <div className="col-lg-12">
+                        <div>
+                            <Button onClick={ExecutarPentest}>
+                                Executar
+                            </Button>
+                        </div>
+                    </div>
+                </div>
             </aside>
             <main>
-                <img src={chain} />
-                <strong>Cyber Kill Chain</strong>
-                <p>Avaliação da integridade da sua infraestrutura</p>
-                <Button onClick={PreencherForms}>
-                    Preencher
-                </Button>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <img src={chain} />
+                    </div>
+                    <div className="col-lg-12"><strong>Cyber Kill Chain</strong></div>
+                    <div className="col-lg-12"><p>Avaliação da integridade da sua infraestrutura</p></div>
+                    <div className="col-lg-12"><Button onClick={PreencherForms}>
+                        Preencher
+                    </Button></div>
+                </div>
             </main>
             <aside className="aside-right">
-                <img src={relatorio} />
-                <strong>Relatórios</strong>
-                <p>Verifique os resultados dos testes</p>
-                <Button onClick={GerarRelatorios}>
-                    Executar
-                </Button>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <img src={relatorio} />
+                    </div>
+                    <div className="col-lg-12">
+                        <strong>Relatórios</strong>
+                    </div>
+                    <div className="col-lg-12">
+                        <p>Verifique os resultados dos testes</p>
+                    </div>
+                    <div className="col-lg-12">
+                        <Button onClick={GerarRelatorios}>
+                            Executar
+                        </Button>
+                    </div>
+
+                </div>
             </aside>
         </div>
 
