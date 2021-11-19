@@ -58,7 +58,7 @@ export function Formulario() {
             {
                 Perguntas.map((element, index) =>
                 (
-                    <div key={element.id} className="formulario">
+                    <div key={element.id} className="">
                         <p>{element.title}</p>
                         {
                             element.respostas.map((resp, indexResp) =>

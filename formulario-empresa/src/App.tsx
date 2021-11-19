@@ -5,6 +5,7 @@ import {BrowserRouter, Route }  from 'react-router-dom';
 import { Register } from './pages/Register';
 import { Pentest } from './pages/Pentest';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Relatorios } from './pages/Relatorios';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/Funcionalidades" exact component={Funcionalidades}/>
       <Route path="/Formulario" component={Formulario}/>
       <Route path="/Pentest" component={Pentest}/>
+      <Route path="/Relatorios" component={Relatorios}/>
     </BrowserRouter>
   )
 }

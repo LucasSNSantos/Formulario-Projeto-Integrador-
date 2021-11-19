@@ -25,7 +25,7 @@ export function Register() {
     const history = useHistory();
     function Registrado()
     {
-        history.push('/Home');
+        history.push('/');
     }
 
     const [CNPJ, setCNPJ] = useState("");

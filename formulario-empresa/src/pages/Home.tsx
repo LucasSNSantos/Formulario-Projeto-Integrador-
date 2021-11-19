@@ -10,10 +10,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export function Home() {
+    const url = 'http://127.0.0.1:8000/login';
     const history = useHistory();
-    function PreencherForms() {
-        history.push('/Funcionalidades');
+    const [login, SetLogin] = useState("");
+    const [senha, SetSenha] = useState("");
+
+    const handleLogin = (event: { target: { value: any; }; }) => {
+        SetLogin(event.target.value)
     }
+    const handleSenha = (event: { target: { value: any; }; }) => {
+        SetSenha(event.target.value)
+    }
+
+
+    const PreencherForms = (event: { preventDefault: () => void; }) => {
+        event.preventDefault();
+        const body = 'grant_type=&username=' + login + '&password=' + senha + '&scope=&client_id=&client_secret=';
+
+        axios.post(url, body).then((res) => {
+            console.log(res.data)
+            history.push('/Funcionalidades');
+
+        }).catch((error) => {
+            console.log(error)
+        });
+        
+    }
+
+
     return (
 
         <div id="page-home">
@@ -25,20 +49,24 @@ export function Home() {
             <main>
                 <div className="main-content">
                     <img src={chain} />
-                    <form>
+                    <form onSubmit={PreencherForms}>
                         <Input
                             type="text"
-                            placeholder="CNPJ"
+                            placeholder="Login"
+                            value={login}
+                            onChange={handleLogin}
                         />
                         <Input
                             type="password"
                             placeholder="Senha"
+                            value={senha}
+                            onChange={handleSenha}
                         />
-                        <div className="text-center">
+                        <div className="text-center mr-5">
                             <a>Não possui cadastro? </a>
                             <a href="/Registrar" className="ml-2">  Registre-se</a>
                         </div>
-                        <Button onClick={PreencherForms}>
+                        <Button>
                             Entrar
                         </Button>
                     </form>
