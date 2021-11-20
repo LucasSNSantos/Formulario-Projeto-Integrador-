@@ -1,7 +1,19 @@
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useMemo, useState } from 'react';
+import { defaults, Doughnut } from 'react-chartjs-2';
+import { GraficoQuestoes } from '../Components/GraficoQuestoes';
+import { ScoreTotal } from '../Components/GraficoScoreTotal';
+import { RadarKillchain } from '../Components/RadarKillchain';
+
+
+defaults.animation = false;
+
+
 
 export function Relatorios() {
+
+    const firm = "03795071000116"; //CNPJ da empresa aqui
 
     return (
 
@@ -14,21 +26,21 @@ export function Relatorios() {
                 <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
                     <div className="row">
                         <h2>Gráfico em Radar Killchain</h2>
-                        <canvas className="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                        <RadarKillchain />
                     </div>
                 </div>
 
                 <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
                     <div className="row">
                         <h2>Gráfico dos Tópicos</h2>
-                        <canvas className="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                        <ScoreTotal firm={firm} />
                     </div>
                 </div>
 
                 <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
                     <div className="row">
                         <h2>Gráfico das Perguntas</h2>
-                        <canvas className="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                        <GraficoQuestoes />
                     </div>
                 </div>
             </main>
