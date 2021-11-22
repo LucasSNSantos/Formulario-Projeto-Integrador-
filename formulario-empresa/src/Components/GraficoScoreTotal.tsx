@@ -71,8 +71,13 @@ export function ScoreTotal(props: Props) {
 
 
     return (
-        <div>
-            <Doughnut data={graphTotal} options={options} width={"30%"}/>
+        <div className="d-flex justify-content-center">
+            <div className="w-25">
+                <div className="text-center">
+                    <h3>Score Total</h3>
+                </div>
+                <Doughnut data={graphTotal} options={options} width={"30%"} />
+            </div>
         </div>
     );
 

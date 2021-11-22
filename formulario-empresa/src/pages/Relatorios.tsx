@@ -18,28 +18,38 @@ export function Relatorios() {
     return (
 
         <div className="container">
-            <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 className="h2">Relatórios</h1>
+            <main className="col-md-12  px-md-4">
+                <div className="pt-3 pb-2 mb-3 border-bottom">
+                    <h1 className="h2">Resultados da Análise</h1>
                 </div>
 
-                <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+                <div className="pt-3 pb-2 mb-3">
                     <div className="row">
-                        <h2>Gráfico em Radar Killchain</h2>
-                        <RadarKillchain />
+                        <div className="col-lg-12">
+                            <RadarKillchain />
+                        </div>
+
+                    </div>
+                    <div className="col-lg-12 mt-5">
+                        <p>
+                            Descrição do gráfico em Radar
+                        </p>
                     </div>
                 </div>
-
-                <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+                <div className="pt-3 pb-2 mb-3">
                     <div className="row">
-                        <h2>Gráfico dos Tópicos</h2>
-                        <ScoreTotal firm={firm} />
+                        <div className="col-lg-12">
+                            <ScoreTotal firm={firm} />
+                        </div>
+                        <div className="col-lg-12 mt-5">
+                        <p>
+                            Descrição do Score Total
+                        </p>
+                        </div>
                     </div>
                 </div>
-
-                <div className="d-flex flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+                <div className="pt-3 pb-2 mb-3 border-bottom">
                     <div className="row">
-                        <h2>Gráfico das Perguntas</h2>
                         <GraficoQuestoes />
                     </div>
                 </div>
