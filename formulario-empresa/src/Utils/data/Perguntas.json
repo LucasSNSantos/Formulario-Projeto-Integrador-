@@ -1,317 +1,687 @@
 [
     {
-        "id":"rec1",
-        "title":"Você possui alguma rede social?",
-        "respostas":[
-            {"resposta":"Possuo algumas redes sociais.", "peso":0},
-            {"resposta":"Possuo poucas redes sociais.", "peso":2},
-            {"resposta":"Não utilizo.", "peso":3}
+        "Codigo": "Reconhecimento",
+        "Decricao":"Avaliação da capacidade de vazamento de informações",
+        "Perguntas": [
+            {
+                "id": "rec1",
+                "title": "Você possui alguma rede social?",
+                "respostas": [
+                    {
+                        "resposta": "Possuo algumas redes sociais.",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Possuo poucas redes sociais.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Não utilizo.",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "rec2",
+                "title": "O quanto você é ativo nelas?",
+                "respostas": [
+                    {
+                        "resposta": "Sempre que pode",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Pelo menos uma vez por dia.",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Pelo menos uma vez na semana.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Não utilizo elas.",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "rec3",
+                "title": "Seu e-mail de trabalho é o mesmo pessoal?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Não.",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "rec4",
+                "title": "Você utiliza as senhas pessoais para softwares do local de trabalho?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, todas minhas senhas. ",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Sim, algumas delas.",
+                        "peso": 1.5
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "rec5",
+                "title": "Você posta fotos no local de trabalho?",
+                "respostas": [
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Sim",
+                        "peso": 3
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"rec2",
-        "title":"O quanto você é ativo nelas?",
-        "respostas":[
-            {"resposta":"Sempre que pode", "peso":0},
-            {"resposta":"Pelo menos uma vez por dia.", "peso":1},
-            {"resposta":"Pelo menos uma vez na semana.", "peso":2},
-            {"resposta":"Não utilizo elas.", "peso":3}
+        "Codigo": "Armamento",
+        "Decricao":"Como saber se existem medidas de contra-ataques disponiveis no seu sistema.",
+        "Perguntas": [
+            {
+                "id": "arm1",
+                "title": "O laboratório possui uma equipe de TI?",
+                "respostas": [
+                    {
+                        "resposta": "Sim.",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Não.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "arm2",
+                "title": "Esta equipe é especializada na área de segurança?",
+                "respostas": [
+                    {
+                        "resposta": "Todos funcionários possuem capacitação.",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Apenas alguns funcionários possuem capacitação.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Nenhum funcionário é capacitado.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "arm3",
+                "title": "Existe treinamento sobre ameaças?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, Semanalmente.",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Sim, Mensalmente.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Sim, Anualmente",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Não.",
+                        "peso": 0
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"rec3",
-        "title":"Seu e-mail de trabalho é o mesmo pessoal?",
-        "respostas":[
-            {"resposta":"Sim", "peso":0},
-            {"resposta":"Não.", "peso":3}
+        "Codigo": "Entrega",
+        "Decricao":"Quais vulnerabilidades do seu sistema durante o envio de ataques",
+        "Perguntas": [
+            {
+                "id": "ent1",
+                "title": "Durante a entrega de exames é comum você permitir que clientes usem seus pendrives para entregar informações no laboratório?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Depende",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "ent2",
+                "title": "Você utiliza seus pendrives particulares para enviar arquivos para computadores ligados a rede do hospital?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Depende",
+                        "peso": 1
+                    }
+                ]
+            },
+            {
+                "id": "ent3",
+                "title": "Existe uma limitação dos sites que podem ser acessados dentro do laboratório?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Depende",
+                        "peso": 3
+                    }
+                ]
+            },
+            {
+                "id": "ent4",
+                "title": "Você abre e-mails suspeitos dentro da rede do laboratório?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 7
+                    }
+                ]
+            },
+            {
+                "id": "ent5",
+                "title": "Qual a frequência dos treinamentos que explicam sobre sites não seguros e e-mails suspeitos?",
+                "respostas": [
+                    {
+                        "resposta": "Semanalmente",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Mensalmente",
+                        "peso": 6
+                    },
+                    {
+                        "resposta": "Trimestralmente",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Semestralmente",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Anualmente",
+                        "peso": 1
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"rec4",
-        "title":"Você utiliza as senhas pessoais para softwares do local de trabalho?",
-        "respostas":[
-            {"resposta":"Sim, todas minhas senhas. ", "peso":0},
-            {"resposta":"Sim, algumas delas.", "peso":1.5},
-            {"resposta":"Não", "peso":3}
+        "Codigo": "Exploração",
+        "Decricao":"Vulnerabilidades do seu sistema que podem ser exploradas por terceiros",
+        "Perguntas": [
+            {
+                "id": "exp1",
+                "title": "Existe uma avaliação dos softwares utilizados?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, de acordo com as normatizações e certificações relacionadas.",
+                        "peso": 5
+                    },
+                    {
+                        "resposta": "Sim, sem normatizações e certificações relacionadas.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Não.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "exp2",
+                "title": "Existe um mapeamento dos arquivos dentro do sistema?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, semanalmente.",
+                        "peso": 5
+                    },
+                    {
+                        "resposta": "Sim, porém não existe uma época em específico.",
+                        "peso": 3
+                    },
+                    {
+                        "resposta": "Não, porém estamos desenvolvendo o procedimento.",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Não, não vemos a necessidade.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "exp3",
+                "title": "O que é feito com os arquivos antigos?",
+                "respostas": [
+                    {
+                        "resposta": "Os arquivos são armazenados em um local à parte do sistema.",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Os arquivos permanecem no mesmo local uma vez colocado no sistema",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Os arquivos são apagados após um período de tempo determinado.",
+                        "peso": 4
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"rec5",
-        "title":"Você posta fotos no local de trabalho?",
-        "respostas":[
-            {"resposta":"Não", "peso":0},
-            {"resposta":"Sim", "peso":3}
+        "Codigo": "Instalação",
+        "Decricao":"Como uma ameaça pode se instalar no sistema",
+        "Perguntas": [
+            {
+                "id": "ins1",
+                "title": "Quando identificado uma possível ameaça os serviços afetados continuam disponíveis?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, é aberto um requerimento (mais burocrático) para a equipe de suporte responsável verificar o ocorrido",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Sim e imediatamente é tratado o erro",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não, paramos os serviços e averiguamos a situação",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "ins2",
+                "title": "As áreas afetadas são notificadas durante o possível ataque?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 5
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "ins3",
+                "title": "Mesmo com a ameaça eliminada é feito uma varredura no sistema para possíveis arquivos ainda infectados?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Depende",
+                        "peso": 7
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"arm1",
-        "title":"O laboratório possui uma equipe de TI?",
-        "respostas":[
-            {"resposta":"Sim.", "peso":7},
-            {"resposta":"Não.", "peso":0}
+        "Codigo": "Comando e Controle",
+        "Decricao":"Como funciona a analise de ameaça e os contra-ataques existentes no seu sistema",
+        "Perguntas": [
+            {
+                "id": "com1",
+                "title": "Existe algum software de análise de malwares?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "com2",
+                "title": "É comum em casos mais extremos de invasão fazer mudanças na rede quanto à conectividade com a internet?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "com3",
+                "title": "É solicitado proxy para os tráfegos de dados entre as redes externas e internas?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"arm2",
-        "title":"Esta equipe é especializada na área de segurança?",
-        "respostas":[
-            {"resposta":"Todos funcionários possuem capacitação.", "peso":4},
-            {"resposta":"Apenas alguns funcionários possuem capacitação.", "peso":2},
-            {"resposta":"Nenhum funcionário é capacitado.", "peso":0}
+        "Codigo": "Ação em Objetivo",
+        "Decricao":"O qu efazer quando tudo deu errado",
+        "Perguntas": [
+            {
+                "id": "aca1",
+                "title": "Quando identificado um agente estranho na rede do laboratório a rede é desligada?",
+                "respostas": [
+                    {
+                        "resposta": "É desligado e feito a varredura imediatamente",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Continua ligada e é feito a averiguação imediatamente",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Continua ligada e é aberto um requerimento (mais burocrático) para a equipe de suporte responsável verificar o ocorrido",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "aca2",
+                "title": "Existe uma política de proxy dentro dos sistema?",
+                "respostas": [
+                    {
+                        "resposta": "Não sei sobre",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Existe porém só é usada em casos de ataques",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Existe, é usada sempre e em todos os tipos de tráfego a fim de evitar problemas de invasão.",
+                        "peso": 5
+                    },
+                    {
+                        "resposta": "Existe, porém apenas para alguns tipos de tráfegos.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "aca3",
+                "title": "Os pontos de acesso são bem estruturados?",
+                "respostas": [
+                    {
+                        "resposta": "Não sei sobre."
+                    },
+                    {
+                        "resposta": "Existe um número fixo destinado ao uso do laboratório.",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "Os pontos são criados conforme solicitado.",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Não existe um acesso estruturado",
+                        "peso": 10
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"arm3",
-        "title":"Existe treinamento sobre ameaças?",
-        "respostas":[
-            {"resposta":"Sim, Semanalmente.", "peso":4},
-            {"resposta":"Sim, Mensalmente.", "peso":2},
-            {"resposta":"Sim, Anualmente", "peso":1},
-            {"resposta":"Não.", "peso":0}
+        "Codigo": "Infraestrutura",
+        "Decricao":"Descrição do Reconhecimento",
+        "Perguntas": [
+            {
+                "id": "inf1",
+                "title": "Qual a frequência que é feito backup dos dados?",
+                "respostas": [
+                    {
+                        "resposta": "Diariamente",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Semanalmente",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Mensalmente",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Trimestralmente",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Semestralmente",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Anualmente",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "inf2",
+                "title": "Existe um backup físico e um na nuvem?",
+                "respostas": [
+                    {
+                        "resposta": "Só físico",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Só em nuvem",
+                        "peso": 1
+                    },
+                    {
+                        "resposta": "Físico e em nuvem",
+                        "peso": 2
+                    },
+                    {
+                        "resposta": "Nenhum dos dois",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "inf3",
+                "title": "Os dispositivos de redes(switch, etc...) são atualizados com que frequência?",
+                "respostas": [
+                    {
+                        "resposta": "Sim, por profissionais qualificados",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Sim, por qualquer funcionário na área de tecnologia",
+                        "peso": 3
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "inf4",
+                "title": "Existe algum sistema de LOG/Registro no servidor",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"ent1",
-        "title":"Durante a entrega de exames é comum você permitir que clientes usem seus pendrives para entregar informações no laboratório?",
-        "respostas":[
-            {"resposta":"Sim", "peso":0},
-            {"resposta":"Não", "peso":7},
-            {"resposta":"Depende", "peso":3}
+        "Codigo": "Informações a Terceiros",
+        "Decricao":"Descrição do Reconhecimento",
+        "Perguntas": [
+            {
+                "id": "int1",
+                "title": "Os dados dos pacientes ficam disponíveis na rede do laboratório?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "int2",
+                "title": "As informações de pacientes estão disponíveis para qualquer funcionário acessar?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "int3",
+                "title": "Os dados são submetidos a algum sistema de encriptação da informação?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 8
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            }
         ]
     },
     {
-        "id":"ent2",
-        "title":"Você utiliza seus pendrives particulares para enviar arquivos para computadores ligados a rede do hospital?",
-        "respostas":[
-            {"resposta":"Sim", "peso":0},
-            {"resposta":"Não", "peso":7},
-            {"resposta":"Depende", "peso":1}
-        ]
-    },
-    {
-        "id":"ent3",
-        "title":"Existe uma limitação dos sites que podem ser acessados dentro do laboratório?",
-        "respostas":[
-            {"resposta":"Sim", "peso":7},
-            {"resposta":"Não", "peso":0},
-            {"resposta":"Depende", "peso":3}
-        ]
-    },
-    {
-        "id":"ent4",
-        "title":"Você abre e-mails suspeitos dentro da rede do laboratório?",
-        "respostas":[
-            {"resposta":"Sim", "peso":0},
-            {"resposta":"Não", "peso":7}
-        ]
-    },
-    {
-        "id":"ent5",
-        "title":"Qual a frequência dos treinamentos que explicam sobre sites não seguros e e-mails suspeitos?",
-        "respostas":[
-            {"resposta":"Semanalmente", "peso":7},
-            {"resposta":"Mensalmente", "peso":6},
-            {"resposta":"Trimestralmente", "peso":4},
-            {"resposta":"Semestralmente", "peso":2},
-            {"resposta":"Anualmente", "peso":1}
-        ]
-    },
-    {
-        "id":"exp1",
-        "title":"Existe uma avaliação dos softwares utilizados?",
-        "respostas":[
-            {"resposta":"Sim, de acordo com as normatizações e certificações relacionadas.", "peso":5},
-            {"resposta":"Sim, sem normatizações e certificações relacionadas.", "peso":2},
-            {"resposta":"Não.", "peso":0}
-        ]
-    },
-    {
-        "id":"exp2",
-        "title":"Existe um mapeamento dos arquivos dentro do sistema?",
-        "respostas":[
-            {"resposta":"Sim, semanalmente.", "peso":5},
-            {"resposta":"Sim, porém não existe uma época em específico.", "peso":3},
-            {"resposta":"Não, porém estamos desenvolvendo o procedimento.", "peso":2},
-            {"resposta":"Não, não vemos a necessidade.", "peso":0}
-        ]
-    },
-    {
-        "id":"exp3",
-        "title":"O que é feito com os arquivos antigos?",
-        "respostas":[
-            {"resposta":"Os arquivos são armazenados em um local à parte do sistema.", "peso":7},
-            {"resposta":"Os arquivos permanecem no mesmo local uma vez colocado no sistema", "peso":0},
-            {"resposta":"Os arquivos são apagados após um período de tempo determinado.", "peso":4}
-        ]
-    },
-    {
-        "id":"ins1",
-        "title":"Quando identificado uma possível ameaça os serviços afetados continuam disponíveis?",
-        "respostas":[
-            {"resposta":"Sim, é aberto um requerimento (mais burocrático) para a equipe de suporte responsável verificar o ocorrido", "peso":7},
-            {"resposta":"Sim e imediatamente é tratado o erro", "peso":15},
-            {"resposta":"Não, paramos os serviços e averiguamos a situação", "peso":0}
-        ]
-    },
-    {
-        "id":"ins2",
-        "title":"As áreas afetadas são notificadas durante o possível ataque?",
-        "respostas":[
-            {"resposta":"Sim", "peso":5},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"ins3",
-        "title":"Mesmo com a ameaça eliminada é feito uma varredura no sistema para possíveis arquivos ainda infectados?",
-        "respostas":[
-            {"resposta":"Sim", "peso":15},
-            {"resposta":"Não", "peso":0},
-            {"resposta":"Depende", "peso":7}
-        ]
-    },
-    {
-        "id":"com1",
-        "title":"Existe algum software de análise de malwares?",
-        "respostas":[
-            {"resposta":"Sim", "peso":15},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"com2",
-        "title":"É comum em casos mais extremos de invasão fazer mudanças na rede quanto à conectividade com a internet?",
-        "respostas":[
-            {"resposta":"Sim", "peso":15},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"com3",
-        "title":"É solicitado proxy para os tráfegos de dados entre as redes externas e internas?",
-        "respostas":[
-            {"resposta":"Sim", "peso":15},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"aca1",
-        "title":"Quando identificado um agente estranho na rede do laboratório a rede é desligada?",
-        "respostas":[
-            {"resposta":"É desligado e feito a varredura imediatamente", "peso":0},
-            {"resposta":"Continua ligada e é feito a averiguação imediatamente", "peso":0},
-            {"resposta":"Continua ligada e é aberto um requerimento (mais burocrático) para a equipe de suporte responsável verificar o ocorrido", "peso":0}
-        ]
-    },
-    {
-        "id":"aca2",
-        "title":"Existe uma política de proxy dentro dos sistema?",
-        "respostas":[
-            {"resposta":"Não sei sobre", "peso":0},
-            {"resposta":"Existe porém só é usada em casos de ataques", "peso":7},
-            {"resposta":"Existe, é usada sempre e em todos os tipos de tráfego a fim de evitar problemas de invasão.", "peso":5},
-            {"resposta":"Existe, porém apenas para alguns tipos de tráfegos.", "peso":0}
-        ]
-    },
-    {
-        "id":"aca3",
-        "title":"Os pontos de acesso são bem estruturados?",
-        "respostas":[
-            {"resposta":"Não sei sobre."},
-            {"resposta":"Existe um número fixo destinado ao uso do laboratório.", "peso":0},
-            {"resposta":"Os pontos são criados conforme solicitado.", "peso":4},
-            {"resposta":"Não existe um acesso estruturado", "peso":10}
-        ]
-    },
-    {
-        "id":"inf1",
-        "title":"Qual a frequência que é feito backup dos dados?",
-        "respostas":[
-            {"resposta":"Diariamente", "peso":2},
-            {"resposta":"Semanalmente", "peso":2},
-            {"resposta":"Mensalmente", "peso":1},
-            {"resposta":"Trimestralmente", "peso":1},
-            {"resposta":"Semestralmente", "peso":1},
-            {"resposta":"Anualmente", "peso":0}
-        ]
-    },
-    {
-        "id":"inf2",
-        "title":"Existe um backup físico e um na nuvem?",
-        "respostas":[
-            {"resposta":"Só físico", "peso":1},
-            {"resposta":"Só em nuvem", "peso":1},
-            {"resposta":"Físico e em nuvem", "peso":2},
-            {"resposta":"Nenhum dos dois", "peso":0}
-        ]
-    },
-    {
-        "id":"inf3",
-        "title":"Os dispositivos de redes(switch, etc...) são atualizados com que frequência?",
-        "respostas":[
-            {"resposta":"Sim, por profissionais qualificados", "peso":7},
-            {"resposta":"Sim, por qualquer funcionário na área de tecnologia", "peso":3},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"inf4",
-        "title":"Existe algum sistema de LOG/Registro no servidor",
-        "respostas":[
-            {"resposta":"Sim", "peso":4},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"int1",
-        "title":"Os dados dos pacientes ficam disponíveis na rede do laboratório?",
-        "respostas":[
-            {"resposta":"Sim", "peso":7},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"int2",
-        "title":"As informações de pacientes estão disponíveis para qualquer funcionário acessar?",
-        "respostas":[
-            {"resposta":"Sim", "peso":15},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"int3",
-        "title":"Os dados são submetidos a algum sistema de encriptação da informação?",
-        "respostas":[
-            {"resposta":"Sim", "peso":8},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"dad1",
-        "title":"Os dados das pesquisas feitas são armazenados em locais separados da rede geral do laboratório?",
-        "respostas":[
-            {"resposta":"Sim", "peso":7},
-            {"resposta":"Não", "peso":0}
-        ]
-    },
-    {
-        "id":"dad2",
-        "title":"Quem são os funcionários que possuem autorização para ver os dados?",
-        "respostas":[
-            {"resposta":"Apenas os pesquisadores responsáveis e alguns funcionários do alto escalão da empresa", "peso":15},
-            {"resposta":"Todos os funcionários que trabalham na área de pesquisa.", "peso":8},
-            {"resposta":"Qualquer funcionário com acesso ao sistema.", "peso":0}
-        ]
-    },
-    {
-        "id":"dad3",
-        "title":"Em caso de possível invasão, o que a parte do sistema responsável pelos dados faz?",
-        "respostas":[
-            {"resposta":"Nada, apenas continua seu funcionamento mesmo sabendo da invasão.", "peso":0},
-            {"resposta":"O sistema é derrubado mesmo não sendo o foco do ataque", "peso":8},
-            {"resposta":"O sistema apenas é derrubado caso o ataque seja nele", "peso":4},
-            {"resposta":"Não foi pensado em uma possível situação para isso.", "peso":0}
+        "Codigo": "Dados de Pesquisa",
+        "Decricao":"Descrição do Reconhecimento",
+        "Perguntas": [
+            {
+                "id": "dad1",
+                "title": "Os dados das pesquisas feitas são armazenados em locais separados da rede geral do laboratório?",
+                "respostas": [
+                    {
+                        "resposta": "Sim",
+                        "peso": 7
+                    },
+                    {
+                        "resposta": "Não",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "dad2",
+                "title": "Quem são os funcionários que possuem autorização para ver os dados?",
+                "respostas": [
+                    {
+                        "resposta": "Apenas os pesquisadores responsáveis e alguns funcionários do alto escalão da empresa",
+                        "peso": 15
+                    },
+                    {
+                        "resposta": "Todos os funcionários que trabalham na área de pesquisa.",
+                        "peso": 8
+                    },
+                    {
+                        "resposta": "Qualquer funcionário com acesso ao sistema.",
+                        "peso": 0
+                    }
+                ]
+            },
+            {
+                "id": "dad3",
+                "title": "Em caso de possível invasão, o que a parte do sistema responsável pelos dados faz?",
+                "respostas": [
+                    {
+                        "resposta": "Nada, apenas continua seu funcionamento mesmo sabendo da invasão.",
+                        "peso": 0
+                    },
+                    {
+                        "resposta": "O sistema é derrubado mesmo não sendo o foco do ataque",
+                        "peso": 8
+                    },
+                    {
+                        "resposta": "O sistema apenas é derrubado caso o ataque seja nele",
+                        "peso": 4
+                    },
+                    {
+                        "resposta": "Não foi pensado em uma possível situação para isso.",
+                        "peso": 0
+                    }
+                ]
+            }
         ]
     }
-
 ]

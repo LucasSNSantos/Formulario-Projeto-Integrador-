@@ -1,7 +1,6 @@
 import {useHistory} from 'react-router-dom'
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from 'axios';
-import ReactDOM from "react-dom";
 
 
 import illustrationImg from '../assets/images/illustration.svg'
@@ -10,15 +9,6 @@ import {Button} from '../Components/Button';
 import {Input} from '../Components/Input';
 import '../styles/register.scss'
 
-
-type Usuario = {
-    name:string;
-    password:string,
-    login:string,
-    permission:number,
-    firm:string,
-    register_indentifier:number
-}
 let url = 'http://127.0.0.1:8000/postUser';
 
 export function Register() {

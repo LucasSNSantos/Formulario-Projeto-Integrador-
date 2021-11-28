@@ -18,6 +18,9 @@ export function Funcionalidades() {
     function GerarRelatorios() {
         history.push('/Relatorios');
     }
+    function ObterComentarios() {
+        history.push('/Comentarios');
+    }
     return (
         <div id="page-funcionalidades">
             <aside className="aside-left">
@@ -45,8 +48,8 @@ export function Funcionalidades() {
                     <div className="col-lg-12">
                         <img src={chain} />
                     </div>
-                    <div className="col-lg-12"><strong>Cyber Kill Chain</strong></div>
-                    <div className="col-lg-12"><p>Avaliação da integridade da sua infraestrutura</p></div>
+                    <div className="col-lg-12"><strong>Avaliação</strong></div>
+                    <div className="col-lg-12"><p>Avaliação da integridade da sua infraestrutura, com base na metodologia Kill Chain</p></div>
                     <div className="col-lg-12"><Button onClick={PreencherForms}>
                         Preencher
                     </Button></div>
@@ -58,17 +61,24 @@ export function Funcionalidades() {
                         <img src={relatorio} />
                     </div>
                     <div className="col-lg-12">
-                        <strong>Relatórios</strong>
+                        <strong>Resultados</strong>
                     </div>
                     <div className="col-lg-12">
-                        <p>Verifique os resultados dos testes</p>
-                    </div>
-                    <div className="col-lg-12">
-                        <Button onClick={GerarRelatorios}>
-                            Executar
-                        </Button>
+                        <p>Verifique os resultados dos testes e comentários sobre seu desempenho</p>
                     </div>
 
+                    <div className="row col-lg-12">
+                        <div className="col-lg-6">
+                            <Button onClick={GerarRelatorios}>
+                                Ver Relatórios
+                            </Button>
+                        </div>
+                        <div className="col-lg-6">
+                            <Button  onClick={ObterComentarios}>
+                                Ver Comentários
+                            </Button>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </div>

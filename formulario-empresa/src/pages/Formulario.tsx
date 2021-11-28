@@ -1,24 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from '../Components/Button';
-import { Input } from '../Components/Input';
-import { Question } from '../Components/Question';
-import { FaBinoculars } from 'react-icons/fa';
-import { GiFieldGun } from 'react-icons/gi';
-import { AiOutlineDeliveredProcedure } from 'react-icons/ai';
-import { MdExplore } from 'react-icons/md';
-import { RiInstallLine } from 'react-icons/ri';
-import { AiFillControl } from 'react-icons/ai';
-import { MdEmojiObjects } from 'react-icons/md';
-import { MdConstruction } from 'react-icons/md';
-import { GrDatabase } from 'react-icons/gr';
-import { HiDocumentSearch } from 'react-icons/hi';
 import { Resposta } from '../Api/Resposta';
 import Perguntas from '../Utils/data/Perguntas.json'
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
+import comentarioLogo from '../assets/images/comentariologo.svg'
 import '../styles/formulario.scss'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,30 +40,62 @@ export function Formulario() {
         });
     }
     return (
-        <form>
-            {
-                Perguntas.map((element, index) =>
-                (
-                    <div key={element.id} className="">
-                        <p>{element.title}</p>
-                        {
-                            element.respostas.map((resp, indexResp) =>
-                            (
-                                <div key={resp.resposta}>
-                                    <label>
-                                        <input type="radio" name={indexResp.toString()} value={resp.resposta} />{resp.resposta}
-                                    </label>
+        <div className="container">
+            <main className="col-md-12 px-md-4">
+                <div className="py-5 text-center">
+                    <img src={comentarioLogo} alt="" width="72" height="57" />
+                    <h2>Questionário</h2>
+                    <p className="lead">Avaliação da Metodologia Kill Chain</p>
+                </div>
+
+                <form>
+                    {
+                        Perguntas.map((element, index) =>
+                        (
+                            <div className="card mt-4">
+                                <div className="text-center mt-4">
+                                    <h2>{element.Codigo}</h2>
                                 </div>
-                            )
-                            )
-                        }
-                    </div>
-                )
-                )
-            }
-            <Button>
-                Enviar Respostas
-            </Button>
-        </form>
+                                <div className="text-center mt-2">
+                                    <p>
+                                        {element.Decricao}
+                                    </p>
+                                </div>
+                                {
+                                    element.Perguntas.map((item, idx) => (
+                                        <div key={idx} className="card m-4">
+                                            <div className="card-header">
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                            <div className="card-body">
+                                                {
+                                                    item.respostas.map((resp, indexResp) =>
+                                                    (
+                                                        <div key={resp.resposta} className="d-flex flex-row bd-highlight mb-3">
+                                                            <div className="p-2 bd-highlight">
+                                                                <input type="radio" name={indexResp.toString()} value={resp.resposta} />
+                                                            </div>
+                                                            <div className="p-2 bd-highlight">
+                                                                {resp.resposta}
+                                                            </div>
+
+                                                        </div>
+                                                    )
+                                                    )
+                                                }
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        )
+                        )
+                    }
+                    <Button>
+                        Enviar Respostas
+                    </Button>
+                </form>
+            </main>
+        </div>
     )
 }
