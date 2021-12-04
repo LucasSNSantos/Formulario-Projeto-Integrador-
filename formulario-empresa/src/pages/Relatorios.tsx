@@ -3,6 +3,7 @@ import { defaults } from 'react-chartjs-2';
 import { GraficoQuestoes } from '../Components/GraficoQuestoes';
 import { ScoreTotal } from '../Components/GraficoScoreTotal';
 import { RadarKillchain } from '../Components/RadarKillchain';
+import { TabelaAtaque } from '../Components/TabelaAtaque';
 
 
 defaults.animation = false;
@@ -30,7 +31,7 @@ export function Relatorios() {
                     </div>
                     <div className="col-lg-12 mt-5 text-center">
                         <p>
-                            O gráfico em rada demonstra os pontos fortes e fracos do sistema, utilizando cada etapa do framework como um fator de análise
+                            O gráfico em radar demonstra os pontos fortes e fracos do sistema, utilizando cada etapa do framework como um fator de análise
                         </p>
                     </div>
                 </div>
@@ -58,6 +59,20 @@ export function Relatorios() {
                         </p>
                     </div>
                 </div>
+
+                <div className="pt-3 pb-2 mb-3 border-bottom">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <TabelaAtaque />
+                        </div>
+                    </div>
+                    <div className="col-lg-12 mt-5 text-center">
+                        <p>
+                            A tabela acima demonstra os resultaos dos testes práticos do desempenho do sistema
+                        </p>
+                    </div>
+                </div>
+                
             </main>
         </div>
 

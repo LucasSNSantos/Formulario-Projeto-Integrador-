@@ -33,3 +33,24 @@ export interface StructScoreFirmTotal{
     dad:ScoreGrafico,
 }
 
+export interface ItemTabelaAtaque{
+    id:number,
+    ip:string,
+    porta:number,
+    requisicao:number,
+    status:string,
+    requisicaofinal:number,
+    duracao:number
+}
+
+
+export interface ResultadoAtaque{
+    id:string,
+    firm:string,
+    date:string,
+    listIp:Array<string>,
+    port:number,
+    numReq:500,
+    numProcess:2,
+    process:Array<ItemTabelaAtaque>
+}

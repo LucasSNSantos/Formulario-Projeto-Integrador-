@@ -1,9 +1,10 @@
 import axios from 'axios'
-import { Comentario, ScoreGrafico, StructComentarios, StructScoreFirmTotal } from '../Usecase/Models'
+import { Comentario, ItemTabelaAtaque, ResultadoAtaque, ScoreGrafico, StructComentarios, StructScoreFirmTotal } from '../Usecase/Models'
 
 
 const urlComentarios = 'http://127.0.0.1:8000/getComments/';
 const urlScoreFirmTotal = 'http://127.0.0.1:8000/getScoreFirmTotal/';
+const urlGetIpAttacks = 'http://127.0.0.1:8000/getIpAttacks/';
 
 export async function GetComentarios(firm: string){
     const url = urlComentarios + firm;
@@ -43,4 +44,23 @@ export async function GetScoreFirmTotal(firm:string)
     
     }
     return Reposta;
+}
+
+
+
+
+
+export async function GetIpAttacks(firm:string){
+    const url = urlGetIpAttacks + firm;
+    const response = await axios.get<Array<ResultadoAtaque>>(url);
+    const Resposta:Array<ItemTabelaAtaque> = []
+    if(response.data != [])
+    {
+        response.data.forEach((element, index) =>{
+            element.process.forEach(item => {
+                Resposta.push(item)
+            });
+        })
+    }
+    return Resposta;
 }
