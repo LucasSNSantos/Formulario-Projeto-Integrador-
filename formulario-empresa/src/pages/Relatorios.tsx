@@ -24,13 +24,13 @@ export function Relatorios() {
                 <div className="pt-3 pb-2 mb-3">
                     <div className="row">
                         <div className="col-lg-12">
-                            <RadarKillchain firm={firm}/>
+                            <RadarKillchain firm={firm} />
                         </div>
 
                     </div>
-                    <div className="col-lg-12 mt-5">
+                    <div className="col-lg-12 mt-5 text-center">
                         <p>
-                            Descrição do gráfico em Radar
+                            O gráfico em rada demonstra os pontos fortes e fracos do sistema, utilizando cada etapa do framework como um fator de análise
                         </p>
                     </div>
                 </div>
@@ -39,16 +39,23 @@ export function Relatorios() {
                         <div className="col-lg-12">
                             <ScoreTotal firm={firm} />
                         </div>
-                        <div className="col-lg-12 mt-5">
-                        <p>
-                            Descrição do Score Total
-                        </p>
+                        <div className="col-lg-12 mt-5 text-center">
+                            <p>
+                                O score total representa a sua pontuação total, o nível de segurança que você atingiu ao preencher as perguntas
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div className="pt-3 pb-2 mb-3 border-bottom">
                     <div className="row">
-                        <GraficoQuestoes />
+                        <div className="col-lg-12">
+                            <GraficoQuestoes />
+                        </div>
+                    </div>
+                    <div className="col-lg-12 mt-5 text-center">
+                        <p>
+                            O gráfico acima representa seu Desempenho individual por tópico, clique nos botões para ver seus resultados
+                        </p>
                     </div>
                 </div>
             </main>

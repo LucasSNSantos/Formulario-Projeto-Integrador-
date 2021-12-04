@@ -1,181 +1,203 @@
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ValoresReais from '../Utils/data/RespostasIdeais.json'
 import { useEffect, useMemo, useState } from 'react';
 import { defaults, Doughnut, Line } from 'react-chartjs-2';
+import { ScoreGrafico } from '../Utils/Usecase/Models';
+import { GetScoreFirmTotal } from '../Utils/Usecase/Rotas';
 
 
 export function GraficoQuestoes() {
+    const firm="06990590000123"
+    const [valoresEsperados,setValorEsperado] = useState(ValoresReais.respostas[0].answers)
+    const [valoresReais,setValoresReais] = useState(Array<number>())
+    const [Resultados,setResultados]= useState(Array<ScoreGrafico>())
+    const [Index, setIndex] = useState(0)
+    const labels = [0,1,2,3,4,5,6,7];
+    useEffect(() => {
+        (async () => {
 
-    const data = {
-        labels: ['1', '2', '3', '4', '5', '6'],
-        datasets: [
-            {
-                label: 'Reconhecimento',
-                data: [12, 19, 3, 5, 2, 3],
-                fill: false,
-                backgroundColor: 'rgb(255, 0, 0)',
-                borderColor: 'rgba(255, 0, 0, 0.2)',
-                yAxisID: 'a1',
-            },
-            {
-                label: 'Armamento',
-                data: [1, 7, 4, 8, 9, 2],
-                fill: false,
-                backgroundColor: 'rgb(0, 255, 0)',
-                borderColor: 'rgba(0, 255, 0, 0.2)',
-                yAxisID: 'a2',
-            },
-            {
-                label: 'Entrega',
-                data: [3, 2, 6, 8, 2],
-                fill: false,
-                backgroundColor: 'rgb(0, 0, 255)',
-                borderColor: 'rgba(0, 0, 255, 0.2)',
-                yAxisID: 'a3',
-            },
-            {
-                label: 'Exploração',
-                data: [7, 4, 4, 1, 2],
-                fill: false,
-                backgroundColor: 'rgb(255,140,0)',
-                borderColor: 'rgba(255,140,0, 0.2)',
-                yAxisID: 'a4',
-            },
-            {
-                label: 'Instalação',
-                data: [3, 1, 3, 0, 2],
-                fill: false,
-                backgroundColor: 'rgb(220,20,60)',
-                borderColor: 'rgba(220,20,60, 0.2)',
-                yAxisID: 'a5',
-            },
-            {
-                label: 'Comando e Controle',
-                data: [6, 0, 1, 2, 2],
-                fill: false,
-                backgroundColor: 'rgb(255,248,220)',
-                borderColor: 'rgba(255,248,220, 0.2)',
-                yAxisID: 'a6',
-            },
-            {
-                label: 'Ação em Objetivo',
-                data: [2, 7, 1, 5, 8],
-                fill: false,
-                backgroundColor: 'rgb(199,21,133)',
-                borderColor: 'rgba(199,21,133, 0.2)',
-                yAxisID: 'a7',
-            },
-            {
-                label: 'Infraestrutura',
-                data: [8, 5, 5, 3, 2],
-                fill: false,
-                backgroundColor: 'rgb(0,206,209)',
-                borderColor: 'rgba(0,206,209, 0.2)',
-                yAxisID: 'a8',
-            },
-            {
-                label: 'Informações de terceiros',
-                data: [2, 4, 3, 3, 8],
-                fill: false,
-                backgroundColor: 'rgb(255,255,0)',
-                borderColor: 'rgba(255,255,0, 0.2)',
-                yAxisID: 'a9',
-            },
-        ],
-    };
+            const response:Array<ScoreGrafico> = await GetScoreFirmTotal(firm)
+            if (response != undefined) {
+                setValoresReais(response[Index].answers);
+                setResultados(response);
+            }
+        })()
+    }, []);
+    
+
+
+
+
+
+
+
 
     const options = {
-        scales: {
-            yAxes: [
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                    id: 'a1',
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a2',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a3',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a4',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a5',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a6',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a7',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a8',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-                    id: 'a9',
-                    gridLines: {
-                        drawOnArea: false,
-                    },
-                },
-            ],
+        responsive: true,
+        interaction: {
+          mode: 'index' as const,
+          intersect: false,
         },
-    };
+        stacked: false,
+        plugins: {
+          title: {
+            display: true,
+            text: ValoresReais.respostas[Index].title,
+          },
+        },
+        scales: {
+          y: {
+            type: 'linear' as const,
+            display: true,
+            position: 'left' as const,
+          },
+          y1: {
+            type: 'linear' as const,
+            display: true,
+            position: 'right' as const,
+            grid: {
+              drawOnChartArea: false,
+            },
+          },
+        },
+      };
+
+      const handleIndex = (event: { target: { value: any; }; }) => {
+        setIndex(parseInt(event.target.value))
+        console.log(Index)
+        setValoresReais(Resultados[Index].answers)
+        setValorEsperado(ValoresReais.respostas[Index].answers)
+    }
+
+      const data = useMemo(()=>{
+          return {
+            labels,
+            datasets: [
+              {
+                label: 'Desempenho Esperado',
+                data: valoresEsperados,
+                borderColor: 'rgb(0, 255, 0)',
+                backgroundColor: 'rgba(0, 255, 0, 0.5)',
+                yAxisID: 'y',
+              },
+              {
+                label: 'Desempenho Real',
+                data: valoresReais,
+                borderColor: 'rgb(255, 00, 00)',
+                backgroundColor: 'rgba(255, 00, 00 0.5)',
+                yAxisID: 'y1',
+              },
+            ],
+          };
+      },[valoresReais,valoresEsperados, Index])
 
     return (
         <div className="d-flex justify-content-center">
             <div className="w-75">
-                <div className="text-center">
-                    <h3>Perguntas</h3>
+                <div className="col-lg-12">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="text-center">
+                                <h4>Etapas</h4>
+                                <div className="row">
+                                    <div className="col-lg-3">
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="0" onChange={handleIndex}  name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Reconhecimento</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="1" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Armamento</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="2"onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Entrega</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-3">
+                                    <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="3" onChange={handleIndex} name="Score" />
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Exploração</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="4" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Instalação</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="5" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Comando e Controle</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-3">
+                                    <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="6" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Ação em Objetivo</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="7" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Infraestrutura</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="8" onChange={handleIndex} name="Score"/>
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Informações a Terceiros</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-3">
+                                    <div className="row">
+                                            <div className="col-auto">
+                                                <input type="radio" value="9" onChange={handleIndex} name="Score" />
+                                            </div>
+                                            <div className="col-auto">
+                                                <label>Dados de pesquisa</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <Line data={data} />
+                <div className="text-center mt-5">
+                    <h4>Desempenho</h4>
+                </div>
+                <Line data={data} options={options} />
             </div>
         </div>
     );

@@ -1,0 +1,89 @@
+{
+    "respostas": [
+        {
+            "title": "Reconhecimento",
+            "answers": [
+                3,
+                3,
+                3,
+                3,
+                3
+            ]
+        },
+        {
+            "title": "Armamento",
+            "answers": [
+                7,
+                4,
+                4
+            ]
+        },
+        {
+            "title": "Entrega",
+            "answers": [
+                7,
+                7,
+                7,
+                7,
+                7
+            ]
+        },
+        {
+            "title": "Exploração",
+            "answers": [
+                4,
+                7,
+                4
+            ]
+        },
+        {
+            "title": "Instalação",
+            "answers": [
+                15,
+                5,
+                15
+            ]
+        },
+        {
+            "title": "Comando e Controle",
+            "answers": [
+                15,
+                15,
+                15
+            ]
+        },
+        {
+            "title": "Ação em Objetivo",
+            "answers": [
+              7,
+              10,
+              8
+            ]
+          },
+          {
+            "title": "Infraestrutura",
+            "answers": [
+              2,
+              2,
+              7,
+              4
+            ]
+          },
+          {
+            "title": "Informações de Terceiros",
+            "answers": [
+              7,
+              15,
+              8
+            ]
+          },
+          {
+            "title": "Dados de Pesquisas",
+            "answers": [
+              7,
+              15,
+              8
+            ]
+          }
+    ]
+}
