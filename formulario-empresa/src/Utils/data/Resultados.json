@@ -1,0 +1,94 @@
+{
+    "messages":[
+        {
+            "title":"Reconhecimento",
+            "id":1,
+            "messages":[
+                "Sua empresa esta segura quanto a capacidade que o invasor tem de coletar informações de funcionarios e da empresa.",
+                "Sua empresa esta parcialmente segura na capacidade que o invasor tem de coletar informações de funcionarios e da empresa, é interessante verificar os locais com problema para melhorar a segurança e evitar problemas de futuros.",
+                "Sua empresa esta pouco ou não possui segurança na capacidade do invasor coletar informações dos funcionarios, é desejável que isso seja verificado o mais rapido possivel para evitar possiveis ataques."
+            ]
+        },
+        {
+            "title":"Armamento",
+            "id":2,
+            "messages":[
+                "Sua empresa esta segura quanto a capacidade preventiva de ataques.",
+                "Sua empresa esta parcialmente segura na capacidade preventiva de ataques, é interessante verificar as regras de funcionamento e treinamentos para os funcionarios.",
+                "Sua empresa esta pouco ou não possui segurança na capacidade preventiva de ataques, existe a necessidade de criar regras mais rigorosas em toda a organização e treinamento dos funcionarios afim de evitar erros humanos conforme as regras do kill chain."
+            ]
+        },
+        {
+            "title":"Entrega",
+            "id":3,
+            "messages":[
+                "Sua empresa esta pouco suscetível que seu sistema seja invadido por um malware atraves de e-mails,web, USB e entre outros.",
+                "Sua empresa esta parcialmente suscetível a infiltração de um malware, sua empresa possui algumas politicas para impedir isso contudo algumas áreas ainda estão comprometidas.",
+                "Sua empresa esta suscetível a infiltração de um malware.Sua empresa não possui nenhuma tipo de firewall eficiente ou esta mal configurado não seguindo o kill chain onde é necessario verificar as atividades maliciosas que podem estar ocorrendo."
+            ]
+        },
+        {
+            "title":"Exploração",
+            "id":4,
+            "messages":[
+                "Sua empresa possui pouca ou nenhuma vulnerabilidade no sistema.",
+                "Sua empresa possui algumas vulnerabilidades, é recomendado que se faça vistorias pelo sistema da empresa afim de corrigir ou minimizar estas falhas.",
+                "Sua empresa possui muitas vulnerabilidades, é recomendado a instalação de produtos que façam verificação de vulnerabilidades para correção das mesmas evitar futuros invasões."
+            ]
+        },
+        {
+            "title":"Instalação",
+            "id":5,
+            "messages":[
+                "Sua empresa esta pouco suscetível a instação de um malware, seus sistemas são seguros e capazes de evitar isso.",
+                "Sua empresa esta parcialmente suscetível a instação de um malware, seus sistemas possuem algumas ferramentas para evitar contudo deve-se atentar a possíveis invasões",
+                "Sua empresa esta suscetível a instação de um malware.Sua empresa possui nenhuma ferramenta ,uma ferramenta fraca ou mal instalada baseado no framework kill chain está etapa é importante para evitar que o malware se aloje no sistema."
+            ]
+        },
+        {
+            "title":"Comando e Controle",
+            "id":6,
+            "messages":[
+                "Sua empresa esta preparada para lidar com situações em que o ataque está no seus estagios iniciais.",
+                "Sua empresa esta parcialmente preparada, pode conseguir bloquear o ataque, porém não ser muito eficientes e causar vazamento de informações.",
+                "Sua empresa não esta preparada para lidar com o ataque, existe a necessidade de criar redes mais seguraças utilizando proxys para todos os tipos de tráfegos,firewalls com regras mais robustas e sistemas de analises mais detalhistas."
+            ]
+        },
+        {
+            "title":"Ações em Objetivos",
+            "id":7,
+            "messages":[
+                "Sua empresa esta preparada para mitigar os danos causados por um ataque bem sucedido.",
+                "Sua empresa é capaz de mitigar os danos porém podem ser bem serios, por isso alguns dados perdidos podem não ser identificados ou ainda pode existir resquícios da ameaça.",
+                "Sua empresa é incapaz de mitigar os danos, suas informações podem ser vazadas e será difícil identificar se as ameaças foram totalmente eliminadas, baseado no framework kill chain está etapa é importante, mesmo que o ataque tenha sido bem sucedido as contramedidas devem ser postas em praticas reduzindo os danos e utilizando softwares e ferramentas para buscar e eliminar resquisicios do malware e identificar como foi possivel este ataque."
+            ]
+        },
+        {
+            "title":"Infraestrutura",
+            "id":8,
+            "messages":[
+                "Sua empresa possui uma infraestrutura que segue os padrões exigidos para laboratórios.",
+                "Sua empresa está com uma infraestrutura aceitável porém existe áreas possiveis de serem melhoradas, verifique os padrões de segurança e infraestrutura.",
+                "Sua empresa está com uma infraestrutura que não atingi os padrões minimos exigidos para um laboratorio, verifique os padrões de segurança e infraestrutura pois mesmo tendo boas ferramentas de segurança se seus equipamentos não forem bons ou estiverem bem atualizados ainda apresentará grande risco para a empresa."
+            ] 
+        },
+        {
+            "title":"Informações de Terceiros",
+            "id":9,
+            "messages":[
+                "Sua empresa mantém as informações pessoais de pacientes e outros clientes seguras conforme a Lei Geral de Proteção de Dados Pessoais.",
+                "Sua empresa mantém as informações pessoais de pacientes e outros clientes parcialmente seguras podendo ter algumas brechas causando vazamento de certas informações desrespeitando a Lei Geral de Proteção de Dados Pessoais.",
+                "Sua empresa não esta seguindo as normas da Lei Geral de Proteção de Dados Pessoais. É importante armazenar corretamente essas informações pois são dados sensiveis podendo comprometer tanto a empresa quanto os pacientes e clientes."
+            ]
+        },
+        {
+            "title":"Dados de pesquisa",
+            "id":10,
+            "messages":[
+                "Sua empresa mantém os dados de pesquisa seguras evitando vazamento de informações vitais de pesquisas da empresa.",
+                "Sua empresa mantém parcialmente os dados de pesquisa seguras podendo causar vazamento de informações vitais de pesquisas da empresa.",
+                "Sua empresa não mantém os dados de pesquisa seguras tendo graves chances de vazamento de informações vitais de pesquisas da empresa."
+            ]
+        }
+    ]
+}

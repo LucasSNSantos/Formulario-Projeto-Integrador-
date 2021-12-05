@@ -7,6 +7,8 @@ import { Button } from '../Components/Button';
 import { Input } from '../Components/Input';
 import '../styles/home.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export function Home() {
@@ -14,7 +16,9 @@ export function Home() {
     const history = useHistory();
     const [login, SetLogin] = useState("");
     const [senha, SetSenha] = useState("");
-
+    const notify = () =>{
+        toast.error("Credenciais incorretas")
+    }
     const handleLogin = (event: { target: { value: any; }; }) => {
         SetLogin(event.target.value)
     }
@@ -33,6 +37,7 @@ export function Home() {
 
         }).catch((error) => {
             console.log(error)
+            notify();
         });
         
     }
@@ -46,6 +51,9 @@ export function Home() {
                 <strong>Killchain Toollisys</strong>
                 <p>Avalie o nivel de Segurança do seu Laboratório</p>
             </aside>
+            <div>
+                <ToastContainer />
+            </div>
             <main>
                 <div className="main-content">
                     <img src={chain} />

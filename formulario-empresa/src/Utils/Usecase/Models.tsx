@@ -54,3 +54,10 @@ export interface ResultadoAtaque{
     numProcess:2,
     process:Array<ItemTabelaAtaque>
 }
+
+
+export interface ResultadoIndex{
+    title:string,
+    valor:number,
+    index:number
+}
